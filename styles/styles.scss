@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --clr-primary-400: #1863d4;
+  --clr-accent-400: #80acf0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #292929;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2em;
+}
+
+.dot {
+  width: 10px;
+  aspect-ratio: 1;
+  background-color: var(--clr-accent-400);
+  border-radius: 50%;
+}
+
+.dot.dance {
+  animation: rise 2000ms infinite alternate;
+}
+
+@keyframes rise {
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+@for $i from 1 through 15 {
+  .dot:nth-child(#{$i}) {
+    animation-delay: 100ms * $i;
+  }
+}
+
+.button {
+  padding: 1em 2em;
+  background: var(--clr-primary-400);
+  border: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #f5f5f5;
+  transition: transform 1000ms;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-1.75rem);
+  transition: transform 250ms;
+}
+
+.party-time {
+  animation: party 2000ms infinite;
+}
+
+@keyframes party {
+  0% {
+    background-color: red;
+  }
+  20% {
+    background-color: orange;
+  }
+  40% {
+    background-color: red;
+  }
+  60% {
+    background-color: blue;
+  }
+  80% {
+    background-color: purple;
+  }
+  100% {
+    background-color: yellow;
+  }
+}

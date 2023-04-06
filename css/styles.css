@@ -1,0 +1,144 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --clr-primary-400: #1863d4;
+  --clr-accent-400: #80acf0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #292929;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2em;
+}
+
+.dot {
+  width: 10px;
+  aspect-ratio: 1;
+  background-color: var(--clr-accent-400);
+  border-radius: 50%;
+}
+
+.dot.dance {
+  animation: rise 2000ms infinite alternate;
+}
+
+@keyframes rise {
+  100% {
+    transform: translateY(-100px);
+  }
+}
+.dot:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+.dot:nth-child(4) {
+  animation-delay: 400ms;
+}
+
+.dot:nth-child(5) {
+  animation-delay: 500ms;
+}
+
+.dot:nth-child(6) {
+  animation-delay: 600ms;
+}
+
+.dot:nth-child(7) {
+  animation-delay: 700ms;
+}
+
+.dot:nth-child(8) {
+  animation-delay: 800ms;
+}
+
+.dot:nth-child(9) {
+  animation-delay: 900ms;
+}
+
+.dot:nth-child(10) {
+  animation-delay: 1000ms;
+}
+
+.dot:nth-child(11) {
+  animation-delay: 1100ms;
+}
+
+.dot:nth-child(12) {
+  animation-delay: 1200ms;
+}
+
+.dot:nth-child(13) {
+  animation-delay: 1300ms;
+}
+
+.dot:nth-child(14) {
+  animation-delay: 1400ms;
+}
+
+.dot:nth-child(15) {
+  animation-delay: 1500ms;
+}
+
+.button {
+  padding: 1em 2em;
+  background: var(--clr-primary-400);
+  border: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #f5f5f5;
+  transition: transform 1000ms;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-1.75rem);
+  transition: transform 250ms;
+}
+
+.party-time {
+  animation: party 2000ms infinite;
+}
+
+@keyframes party {
+  0% {
+    background-color: red;
+  }
+  20% {
+    background-color: orange;
+  }
+  40% {
+    background-color: red;
+  }
+  60% {
+    background-color: blue;
+  }
+  80% {
+    background-color: purple;
+  }
+  100% {
+    background-color: yellow;
+  }
+}/*# sourceMappingURL=styles.css.map */
